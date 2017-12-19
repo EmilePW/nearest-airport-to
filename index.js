@@ -15,8 +15,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 router.get("/", function(req, res) {
-  res.render("index", {});
+  res.render("index", { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY });
 });
+
+router.get("/nearestAirport", function(req, res) {
+  const { location } = req.query;
+  
+})
 
 app.listen(process.env.PORT, function() {
   console.log(`Listening on port ${process.env.PORT}`);
