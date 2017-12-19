@@ -55,13 +55,3 @@ table {
 a {
   text-decoration: none;
 }
-body {
-  min-height: 100%;
-  padding-bottom: 200px;
-  position: relative;
-}
-@media screen and (max-width: 660px) {
-  body {
-    padding-bottom: 300px;
-  }
-}
