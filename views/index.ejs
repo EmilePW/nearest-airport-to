@@ -10,7 +10,7 @@
     <h1 class="title-type top-space">Nearest Airport To...</h1>
     <p class="body-type top-space-s">Type a location to find the nearest airport.</p>
     <form class="flex flex-around" method="GET" action="/nearestAirport">
-      <input name="location" type="text" id="locationInput" placeholder="Enter a location..." />
+      <input value="<%= location %>" name="location" type="text" id="locationInput" placeholder="Enter a location..." required />
       <button type="submit" class="cta">Search</button>
     </form>
     <% if(nearestAirports.length) { %>
