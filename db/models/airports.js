@@ -4,7 +4,7 @@ module.exports = {
     // radius is in miles
     sql: function(lat, lng, radius) {
       return `
-        SELECT * FROM airports
+        SELECT name, iata_code, point(${lng}, ${lat}) <@> lng_lat AS distance FROM airports
         WHERE point(${lng}, ${lat}) <@> lng_lat < ${radius}`;
     },
     postQuery: function(result) {
