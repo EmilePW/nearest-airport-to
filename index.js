@@ -17,7 +17,10 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 router.get("/", function(req, res) {
-  res.render("index", { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY });
+  res.render("index", {
+    GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
+    nearestAirports: []
+  });
 });
 
 router.get("/nearestAirport", async function(req, res) {
@@ -27,7 +30,7 @@ router.get("/nearestAirport", async function(req, res) {
   var nearestAirports = await Q.airports.findWithinRadius(lat, lng, 150);
   res.render("index", {
     GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
-    nearestAirports: nearestAirports || []
+    nearestAirports: nearestAirports
   });
 });
 
