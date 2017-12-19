@@ -27,7 +27,7 @@ router.get("/nearestAirport", async function(req, res) {
   var nearestAirports = await Q.airports.findWithinRadius(lat, lng, 150);
   res.render("index", {
     GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
-    nearestAirports: nearestAirports
+    nearestAirports: nearestAirports || []
   });
 });
 
