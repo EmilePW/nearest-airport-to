@@ -15,7 +15,8 @@
     <ul class="flex flex-v">
       <% nearestAirports.forEach(function(airport) { %>
       <li class="flex flex-between std-padding">
-        <p><%= airport.name %></p>
+        <p><%= airport.name %> (<%= airport.iata_code %>)</p>
+        <p><%= Math.round(airport.distance) %> miles</p>
       </li>
       <% }) %>
     </ul>
