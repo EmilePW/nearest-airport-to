@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
   <%- include("../partials/docHead", {}) %>
+  <link rel="stylesheet" href="/styles/index.css">
   <title>Nearest Airport To - Find The Nearest Airpot To Any Location</title>
 </head>
 <body>
-  <main class="container flex flex-v">
-    <h1 class="title-type">Nearest Airport To...</h1>
-    <p class="body-type top-space">Type a location to find the nearest airport.</p>
-    <form class="top-space-s flex flex-around" method="GET" action="/nearestAirport">
+  <main class="container flex flex-v-center">
+    <h1 class="title-type top-space">Nearest Airport To...</h1>
+    <p class="body-type top-space-s">Type a location to find the nearest airport.</p>
+    <form class="flex flex-around" method="GET" action="/nearestAirport">
       <input name="location" type="text" id="locationInput" placeholder="Enter a location..." />
       <button type="submit" class="cta">Search</button>
     </form>
-    <ul class="flex flex-v">
-      <% nearestAirports.forEach(function(airport) { %>
-      <li class="flex flex-between std-padding">
-        <p><%= airport.name %> (<%= airport.iata_code %>)</p>
-        <p><%= Math.round(airport.distance) %> miles</p>
-      </li>
-      <% }) %>
-    </ul>
+    <div id="searchResults" class="top-space-s">
+      <ul class="flex flex-v">
+        <% nearestAirports.forEach(function(airport) { %>
+        <li class="airport body-type flex flex-between">
+          <p><%= airport.name %> (<%= airport.iata_code %>)</p>
+          <p class="bold"><%= Math.round(airport.distance) %> miles</p>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </main>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_MAPS_API_KEY %>&libraries=places"></script>
   <script>

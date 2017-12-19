@@ -1,4 +1,10 @@
 /* layout */
+.container {
+  margin: 0 auto;
+  max-width: 920px;
+  width: calc(100% - 40px);
+}
+
 .flex {
   display: flex;
 }
@@ -169,12 +175,13 @@ footer {
 }
 
 .cta {
-  background: rgba(142, 68, 173, 1.0);
-  border: none;
-  color: white;
+  background: none;
+  border: 2px solid #2ecc71;
+  border-radius: 10px;
+  color: #2ecc71;
   cursor: pointer;
   font-family: "Roboto", serif;
-  font-size: 18px;
+  font-size: 15px;
   min-height: 25px;
   outline: none;
   padding: 5px 25px;
@@ -188,7 +195,7 @@ footer {
 }
 
 .cta:hover {
-  background: #111;
+  background: #2ecc71;
   /*border: 2px solid rgba(39, 174, 96, 1.0);*/
   color: white;
 }

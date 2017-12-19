@@ -1,0 +1,20 @@
+#locationInput {
+  border: none;
+  border-bottom: 2px solid #2ecc71;
+  margin: 10px;
+  outline: none;
+  padding: 5px;
+  width: 300px;
+}
+
+#searchResults {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.airport {
+  padding: 3px;
+  width: 100%; 
+}
