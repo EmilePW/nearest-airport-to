@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const app = express();
+const { Q } = require("./db/");
 
 app.use(bodyParser.json());
 app.use(
@@ -20,7 +21,7 @@ router.get("/", function(req, res) {
 
 router.get("/nearestAirport", function(req, res) {
   const { location } = req.query;
-  
+
 })
 
 app.listen(process.env.PORT, function() {
