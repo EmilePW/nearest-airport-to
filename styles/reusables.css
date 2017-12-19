@@ -1,0 +1,275 @@
+/* layout */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-v {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-v-start {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-v-left {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flex-v-start-left {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-around {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-around-start {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-v-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-self {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-space {
+  margin-top: 50px;
+}
+
+.top-space-s {
+  margin-top: 20px;
+}
+
+.max-500 {
+  max-width: 500px
+}
+
+.max-800 {
+  max-width: 800px;
+}
+
+.std-padding {
+  padding: 0px 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.m-appear {
+  display: none;
+}
+
+/* Typography */
+
+* {
+  color: #222;
+}
+
+.title-type {
+  font-family: "Crimson Text", sans-serif;
+  font-size: 32px;
+  /*font-weight: 600;*/
+  line-height: 1.3;
+}
+
+.heading-type {
+  font-family:"Crimson Text", sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.body-type {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.success {
+  color: #27ae60;
+}
+
+.error {
+  color: #c0392b;
+}
+
+/* components */
+
+nav {
+  /*border-bottom: 2px solid #222;*/
+  background: white;
+  padding: 10px 20px;
+}
+
+nav ul {
+  /*width: 300px;*/
+}
+
+nav li {
+  font-size: 13px;
+  margin: 0px 10px;
+}
+
+.hamburger {
+  font-size: 40px;
+}
+
+.logo {
+  font-family: "Crimson Text", serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 20px;
+  text-transform: lowercase;
+}
+
+footer {
+  background: rgba(0, 255, 0, 0.4);
+  bottom: 0;
+  padding: 15px 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.cta {
+  background: rgba(142, 68, 173, 1.0);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
+  min-height: 25px;
+  outline: none;
+  padding: 5px 25px;
+  min-width: 120px;
+}
+
+.cta:disabled, .cta:disabled:hover {
+  background: #eee;
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.cta:hover {
+  background: #111;
+  /*border: 2px solid rgba(39, 174, 96, 1.0);*/
+  color: white;
+}
+
+.cta-success {
+  background: rgba(0, 255, 0, 0.4);
+  color: #222;
+}
+
+.cta-failure {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.overview {
+  padding: 30px 0px;
+  /*margin: 30px auto;*/
+}
+
+.form-section {
+  margin-top: 30px;
+  width: 250px;
+}
+
+.form-section-sm {
+  margin-top: 10px;
+  /*padding-left: 20px;*/
+}
+
+.form-section label p {
+  margin-bottom: 5px;
+}
+
+.input-std {
+  height: 30px;
+  padding: 2px;
+  width: 250px;
+}
+
+select {
+  height: 30px;
+  padding: 2px;
+  width: 250px;
+}
+
+textarea {
+  height: 100px;
+  padding: 2px;
+  width: 250px;
+}
+
+.separator {
+  background: rgba(0, 255, 0, 0.4);
+  border: none;
+  height: 2px;
+  margin: 50px auto 0px auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 660px) {
+  nav ul {
+    margin: 10px auto;
+    min-width: 80%;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .flex-around, .flex-center, .flex-around-start {
+    flex-direction: column;
+  }
+
+  .flex-around, .flex-center, .flex-between > div, .flex-around, .flex-center, .flex-between > li {
+    margin-bottom: 20px;
+  }
+
+  .m-hide {
+    display: none;
+  }
+
+  .m-appear {
+    display: block;
+  }
+}
