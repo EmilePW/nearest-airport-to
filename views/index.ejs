@@ -12,6 +12,13 @@
       <input name="location" type="text" id="locationInput" placeholder="Enter a location..." />
       <button type="submit" class="cta">Search</button>
     </form>
+    <ul class="flex flex-v">
+      <% nearestAirports.forEach(function(airport) { %>
+      <li class="flex flex-between std-padding">
+        <p><%= airport.name %></p>
+      </li>
+      <% }) %>
+    </ul>
   </main>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_MAPS_API_KEY %>&libraries=places"></script>
   <script>
