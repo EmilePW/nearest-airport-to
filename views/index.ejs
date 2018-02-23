@@ -9,7 +9,7 @@
   <main class="container flex flex-v-center">
     <h1 class="title-type top-space">Nearest Airport To...</h1>
     <p class="body-type top-space-s">Type a location to find the nearest airport.</p>
-    <form class="flex flex-around" method="GET" action="/nearestAirport">
+    <form class="flex flex-around top-space-s" method="GET" action="/nearestAirport">
       <input value="<%= location %>" name="location" type="text" id="locationInput" placeholder="Enter a location..." required />
       <button type="submit" class="cta">Search</button>
     </form>
@@ -31,6 +31,19 @@
     <% } %>
     </div>
   </main>
+  <footer class="container flex flex-center top-space-s">
+    <p class="body-type push-right">Made by </p>
+    <a href="https://www.atlaseasy.com">
+      <div class="Logo">
+        <span>Atlas</span>
+        <img
+          src="https://s3.eu-west-2.amazonaws.com/atlaseasy/AtlasEasy-icon.svg"
+          alt="Atlas Easy Logo"
+          width="50" />
+        <span>Easy</span>
+      </div>
+    </a>
+  </footer>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_MAPS_API_KEY %>&libraries=places"></script>
   <script>
     var input = document.getElementById("locationInput");

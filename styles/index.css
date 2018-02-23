@@ -1,6 +1,6 @@
 #locationInput {
   border: none;
-  border-bottom: 2px solid #2ecc71;
+  border-bottom: 2px solid #1A237E;
   margin: 10px;
   outline: none;
   padding: 5px;
@@ -10,11 +10,22 @@
 #searchResults {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  height: 400px;
+  height: calc(100vh - 338px);
   overflow-y: scroll;
 }
 
 .airport {
   padding: 3px;
   width: 100%; 
+}
+
+.Logo {
+  align-items: center;
+  color: #1A237E;
+  display: flex;
+  font-family: "Inter UI", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: space-around;
+  text-transform: uppercase;
 }
